@@ -1,0 +1,69 @@
+@keyframes glowing {
+    50% {
+        background-size: 100% 100%;
+        // transform: skew(1.5deg);
+    }
+}
+
+.btn {
+    border-radius: 0.25rem;
+    background-image: linear-gradient(to right, #db2777 0%, #ea580c 100%);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: white;
+    transition: all 1s;
+}
+
+.btn-wrap {
+    padding: 10px;
+    margin: -10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: inset 0 0 8px 8px #171717, inset 0 0 0 1px #171717;
+    transition: all .05s;
+
+    background: linear-gradient(to right, #dc2626, #db2777, #ea580c, #dc2626);
+    background-size: 400% 100%;
+    animation: glowing 5s ease-in-out infinite;
+    user-select: none;
+
+
+    &:active{
+        transform: scale(0.96);
+
+        & .btn {
+            background-image: linear-gradient(to right, #db2777 0%, #ea580c 60%);
+        }
+    }
+}
+
+
+.input-wrap {
+    padding: 2px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #262626 0%, #262626 100%);
+    transition: all .2s;
+    
+    &.true {
+        background: linear-gradient(to right, #ea580c, #db2777);
+    }
+}
+
+.input {
+    background-color: #171717;
+    width: 100%;
+    padding: 6px 12px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: #525252;
+    }
+}
